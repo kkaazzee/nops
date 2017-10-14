@@ -1,0 +1,41 @@
+{
+  "name": "nops",
+  "version": "1.0.0",
+  "main": "lib/nops.js",
+  "repository": "https://github.com/kkaazzee/nops.git",
+  "author": "KKaazzee <kkaazzee@protonmail.com>",
+  "license": "Unlicense",
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=8.6.0"
+  },
+  "dependencies": {
+    "command-exists": "^1.2.2",
+    "commander": "^2.11.0",
+    "filesize": "^3.5.10",
+    "fs-extra": "^4.0.2",
+    "got": "^7.1.0",
+    "json-stable-stringify": "^1.0.1",
+    "promptly": "^2.2.0",
+    "remote-file-size": "^3.0.3",
+    "semver": "^5.4.1",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint": "^4.8.0",
+    "eslint-plugin-no-unused-vars-rest": "^1.0.6",
+    "eslint_d": "^5.1.0",
+    "nodemon": "^1.12.1"
+  },
+  "bin": {
+    "nops": "lib/nops.js"
+  },
+  "scripts": {
+    "requirements-check": "node lib/check-version.js",
+    "postinstall": "npm run requirements-check",
+    "lint": "eslint lib/*.js",
+    "dev": "nodemon --watch lib --watch fixtures.json lib/nops.js",
+    "devi": "nodemon --inspect --watch lib --watch fixtures.json lib/nops.js"
+  }
+}
