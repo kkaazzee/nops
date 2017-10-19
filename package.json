@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "command-exists": "^1.2.2",
-    "commander": "^2.11.0",
     "filesize": "^3.5.10",
     "fs-extra": "^4.0.2",
     "got": "^7.1.0",
@@ -19,7 +18,8 @@
     "promptly": "^2.2.0",
     "remote-file-size": "^3.0.3",
     "semver": "^5.4.1",
-    "valid-url": "^1.0.9"
+    "valid-url": "^1.0.9",
+    "yargs": "^9.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.1",
