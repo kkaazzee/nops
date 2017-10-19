@@ -58,6 +58,14 @@ $ npm uninstall nops -g
 
 ## Changelog
 
+### 1.1.0
+
+* Remove Title ID and Name prompts. They may be brought back in a future version if there proves to be a need for them.
+* Fix race condition in downloading component which could lead to incomplete downloads. Incomplete downloads were never processed but the this prevents unpredictable errors.
+* Fix race condition in DotDot usage by the download task which could result in a download tick leaving file size text in the processing line.
+* The processing task logging was cleaned up. The task will now always output error messages from pkg_dec.
+* Replace commander with yargs for better CLI parameterization.
+
 ### 1.0.1
 
 * Corrected incorrect URL and download directory resolution when requiring `nops`from another module.
@@ -74,3 +82,5 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Thanks!
 
 * Most of all, thank you to the PkgDecrypt authors for your work and help!
+
+dlc note about 31 max
